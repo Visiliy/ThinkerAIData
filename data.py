@@ -1,5 +1,5 @@
 import os
-from main import use_qwen
+from use_qwen import use_qwen
 
 folder_path = r'C:\Users\admin\Documents\amps\amps\mathematica'
 folders = [f for f in os.listdir(folder_path)
@@ -30,3 +30,5 @@ for folder in folders:
                 print("----------------------------------")
                 print("\n")
 print("Ok")
+# wsl -d Ubuntu
+# ollama serve
