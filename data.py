@@ -18,13 +18,13 @@ for folder in folders:
                 answer = use_qwen(prompt)
                 d, k, q, v = answer.split("-----")
                 os.makedirs(f"ThinkerAIDataset/{subfolder}_{data[:-4]}", exist_ok=True)
-                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/d.txt", "r", encoding="utf-8") as f1:
+                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/d.txt", "w", encoding="utf-8") as f1:
                     f1.write(d)
-                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/q.txt", "r", encoding="utf-8") as f2:
+                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/q.txt", "w", encoding="utf-8") as f2:
                     f2.write(q)
-                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/k.txt", "r", encoding="utf-8") as f3:
+                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/k.txt", "w", encoding="utf-8") as f3:
                     f3.write(k)
-                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/v.txt", "r", encoding="utf-8") as f4:
+                with open(f"ThinkerAIDataset/{subfolder}_{data[:-4]}/v.txt", "w", encoding="utf-8") as f4:
                     f4.write(v)
                 print(f"{subfolder}_{data}")
                 print("----------------------------------")
