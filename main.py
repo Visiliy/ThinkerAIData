@@ -6,16 +6,18 @@ load_dotenv()
 
 client = Qwen()
 
-messages = [ChatMessage(
-    role="user",
-    content="Hello",
-    web_search=False,
-    thinking=False
-)]
+def use_qwen(prompt: str):
 
-response = client.chat.create(
-    messages=messages,
-    model="qwen-max-latest"
-)
+    messages = [ChatMessage(
+        role="user",
+        content=prompt,
+        web_search=False,
+        thinking=False
+    )]
 
-print(response.choices.message.content)
+    response = client.chat.create(
+        messages=messages,
+        model="qwen-max-latest"
+    )
+
+    return response.choices.message.content
